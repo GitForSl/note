@@ -27,12 +27,12 @@
 ### 4.消息事务
 * RabbitMq支持
 * RocketMq支持
-  1.producer发送半消息到broker（半消息是完整的消息，只是这时候对consumer是不可见的）
-  2.broker发送确认半消息到producer
-  3.producer执行本地事务
-  4.producer根据执行事务的成功或失败，发送commit或rollback给broker
-  5.若broker没有收到producer上面的4步骤的消息，执行事务的反查机制，随机调用一个producer检查事务执行的状态
-  6.然后根据事务的发查机制，来判断消息是提交还是回滚
+  1.producer发送半消息到broker（半消息是完整的消息，只是这时候对consumer是不可见的）<br>
+  2.broker发送确认半消息到producer<br>
+  3.producer执行本地事务<br>
+  4.producer根据执行事务的成功或失败，发送commit或rollback给broker<br>
+  5.若broker没有收到producer上面的4步骤的消息，执行事务的反查机制，随机调用一个producer检查事务执行的状态<br>
+  6.然后根据事务的发查机制，来判断消息是提交还是回滚<br>
 * Kafka支持，和RocketMQ类似，只是kafka在上面第4步骤失败，直接抛出异常，让客户端自己处理，没有反查机制
 
 ### 5.如何保证消息不丢失？
