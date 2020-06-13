@@ -26,7 +26,7 @@
   
 ### 4.消息事务
 * RabbitMq支持
-* RocketMq支持
+* RocketMq支持<br>
   1.producer发送半消息到broker（半消息是完整的消息，只是这时候对consumer是不可见的）<br>
   2.broker发送确认半消息到producer<br>
   3.producer执行本地事务<br>
