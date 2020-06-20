@@ -7,7 +7,7 @@
 
 * list 结构是个快速链表（zplist）而不是个数组，所以插入删除操作很快，定位很慢<br/>
 1.用来做异步队列<br/>
-2.右进左出队列，rpush,lpop;llen获取长度<br/>
+2.右进左出队列，rpush,lpop,blpop,brpop;llen获取长度<br/>
 3.右进右出栈，rpush,rpop
 
 * hash 相当于java里的hashmap，结构数组加链表，存储的值只能为string<br/>
